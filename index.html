@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/celular.css">
+    <link rel="stylesheet" href="style/tabelaUsuario.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <script src="usuarioRepository.js" defer></script><!-- Primeiro a API --> 
+    <script src="index.js" defer></script>
+
+</head>
+<body>
+    <body>
+        <div class="container">
+            <div class="headerCadastro">
+                <i class="bi bi-person-badge"></i>
+                <h1>Cadastro de Usuários</h1>
+            </div>
+
+            <p id="mensagensDeErro" class="mensagensDeErro"></p>
+
+            <form class="formularioCadastroUsuario" id="formularioCadastroUsuario">
+
+               
+                <div class="entrada">
+
+                    <input name="nome" placeholder="Nome" id="nome" type="text" required>
+
+                </div>
+
+
+                <div class="entrada">
+
+                    <input name="email" placeholder="E-mail" id="email" type="text" required>
+
+                </div>
+
+                <input name="idusuario" id="idusuario" type="hidden" value="">
+                
+                <button id="confirmaUsuario" type="submit" class="icone">
+                    <i class="bi bi-plus-circle-fill"></i>
+                </button>
+
+            </form><!-- FIM - formularioCadastroUsuario -->
+
+            <table class="tabelaUsuarios" id="tabelaUsuarios">
+                 <!-- Criado no .JS -->
+                
+            </table>
+        
+        </div><!-- FIM - container -->
+    
+</body>
+</html>
+

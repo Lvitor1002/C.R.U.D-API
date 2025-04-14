@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #a1a1a11c;
+    color: #323232;
+}
+
+.container {
+    margin: 10% 20%;
+}
+
+
+
+
+/*                      Formulário                  */
+
+.headerCadastro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    gap: 20px;
+    white-space: nowrap; 
+    
+}
+
+.headerCadastro i {
+    font-size: 60px;
+    color:#35cf209a;
+}
+
+h1 {
+    font-size: 38px;
+    background: linear-gradient(80deg, #2600ffb4, #09ee09c2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.mensagensDeErro {
+    color: rgba(255, 0, 0, 0.322);
+    display: none;
+    white-space: wrap;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.178);
+    background-color: white;
+
+}
+
+
+.mensagensDeErroExibir {
+    display: block;
+}
+.formularioCadastroUsuario {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 50px;
+    flex-direction: row ;
+    
+}
+
+.formularioCadastroUsuario input {
+    height: 40px;
+    border-radius: 10px;
+    border: .1px solid #001aff1c;
+    padding: 5px;
+    width: 100%;
+    outline: none;
+    transition: all 1s;
+    
+}
+
+.formularioCadastroUsuario input:hover,
+.formularioCadastroUsuario input:focus {
+    border: 2px solid #204BCF;
+}
+
+button i{
+    font-size: 40px;
+    color: #35cf20a2;
+    cursor: pointer;
+}
+
+button{
+    border: none;
+    background-color: transparent;
+    transition: all .3s ease;
+}
+button:active {
+    transform: scale(1.4);
+}
+
+
+.formularioCadastroUsuario .entrada {
+    width: 110%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.formularioCadastroUsuario .entrada label{
+    padding: 0px 10px;
+    white-space: nowrap; 
+    position: relative;
+    top: 10px;
+    color: rgba(0, 0, 0, 0.438);
+}
+
+
+

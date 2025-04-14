@@ -1,0 +1,43 @@
+
+@media screen and (max-width: 1260px) {
+
+    .tabelaFixa{
+        top: 60px;
+        
+    }
+    .tabelaFixa tr{
+        justify-content: center;
+        align-items: center;
+        gap: 50%;
+    }
+    .tabelaFixa th#op0 {
+        right: 10%;
+    }
+    
+    
+}
+@media screen and (max-width: 560px) {
+    .container {
+        margin: 10% 9%;
+    }
+    .headerCadastro {
+        flex-direction: column;
+        
+
+    }
+
+    .formularioCadastroUsuario {
+        flex-wrap: wrap; 
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;   
+          
+    }
+    .formularioCadastroUsuario input, label{
+        position: relative;
+        right: 18px;
+    }
+
+
+    
+}

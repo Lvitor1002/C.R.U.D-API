@@ -1,0 +1,92 @@
+
+/*                      Tabela                  */
+
+
+
+/* Evento de tracejado para cada linha */
+
+.tabelaUsuarios .editandoCliente {
+    border: 3px solid rgb(37, 197, 5);
+}
+
+.editandoCliente{
+    border: 3px dashed transparent;
+}
+
+
+
+tr {
+    height: 60px;
+    border: none;
+    border-top: 2px solid #D8D8D8;  
+    
+    
+}
+
+th{
+    text-align: left;
+    font-weight: bold;
+    
+    
+}
+
+.tabelaUsuarios {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 50px;
+    
+}
+.tabelaUsuarios button {
+    border: none;
+    background-color: rgba(0,0,0,0);
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+
+.container tr:nth-child(2n) {
+    background-color: #F6F6F6;
+    
+}
+
+.tabelaUsuarios td {
+    padding: 0 5px;
+    background-color: white;
+    
+}
+.tabelaUsuarios td:active {
+    background-color: rgba(87, 214, 28, 0.103);
+    
+    
+}
+.tabelaUsuarios th#op {
+    position: relative;
+    left: 35px;
+}
+.tabelaUsuarios i{
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 2px;
+    cursor: pointer;
+    border: .5px solid #00000000;
+    transition: all .3s ease;
+}
+.tabelaUsuarios i:active{
+    transform: scale(1.3);
+}
+.tabelaUsuarios .editar{
+    color: rgba(0, 0, 255, 0.726);
+    
+}
+.tabelaUsuarios .editar:hover{
+    border: .1px solid #0000000a;
+    
+}
+.tabelaUsuarios .remover{
+    color: rgba(255, 0, 0, 0.753);
+}
+.tabelaUsuarios .remover:hover{
+    border: .1px solid #00000010;
+    
+}
+
