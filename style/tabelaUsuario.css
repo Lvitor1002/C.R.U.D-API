@@ -4,24 +4,28 @@
 
 
 /* Evento de tracejado para cada linha */
+.tabela{
 
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 50px;
+    position: relative;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    gap: 340%;
+}
+.tabela th#op{
+    position: relative;
+}
 .tabelaUsuarios .editandoCliente {
     border: 3px solid rgb(37, 197, 5);
 }
 
-.editandoCliente{
-    border: 3px dashed transparent;
-}
 
-
-
-tr {
-    height: 60px;
-    border: none;
-    border-top: 2px solid #D8D8D8;  
-    
-    
-}
 
 th{
     text-align: left;
@@ -29,7 +33,17 @@ th{
     
     
 }
-
+.controle{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.322);
+    border-radius: 10px;
+    padding-bottom: 50px;
+    padding: 0px 2%;
+    margin-top: 35px;
+}
 .tabelaUsuarios {
     width: 100%;
     border-collapse: collapse;
@@ -43,50 +57,97 @@ th{
     margin-left: 20px;
 }
 
-
-.container tr:nth-child(2n) {
-    background-color: #F6F6F6;
-    
-}
-
-.tabelaUsuarios td {
+.tabelaUsuarios tr {
     padding: 0 5px;
-    background-color: white;
-    
+    font-size: 20px;
+    padding-bottom: 30px;
+    transition: all 1s;
 }
+.tabelaUsuarios tr:hover {
+    color: white;
+    background-color: rgb(5, 0, 155);
+}
+.tabelaUsuarios td {
+    
+    padding: 0 5px;
+    padding-bottom: 5px;
+}
+
 .tabelaUsuarios td:active {
     background-color: rgba(87, 214, 28, 0.103);
     
     
 }
-.tabelaUsuarios th#op {
-    position: relative;
-    left: 35px;
+
+
+.campoOp{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+
 }
-.tabelaUsuarios i{
+.campoOp .editar{
+    text-align: center;
     font-size: 20px;
-    border-radius: 20px;
-    padding: 2px;
+    color: #0004ff;
     cursor: pointer;
-    border: .5px solid #00000000;
-    transition: all .3s ease;
+    padding: 18px 10px;
+    border: none;
+    transition: all 1s;
 }
-.tabelaUsuarios i:active{
-    transform: scale(1.3);
-}
-.tabelaUsuarios .editar{
-    color: rgba(0, 0, 255, 0.726);
-    
-}
-.tabelaUsuarios .editar:hover{
-    border: .1px solid #0000000a;
-    
-}
-.tabelaUsuarios .remover{
-    color: rgba(255, 0, 0, 0.753);
-}
-.tabelaUsuarios .remover:hover{
-    border: .1px solid #00000010;
-    
+.campoOp .editar:hover{
+    transform: scale(1.2);
+    transition-duration: 0s;
 }
 
+.campoOp .remover{
+    text-align: center;
+    font-size: 20px;
+    color: #ff0000;
+    cursor: pointer;
+    padding: 18px 10px;
+    border: none;
+    transition: all 1s;
+}
+.campoOp .remover:hover{
+    transform: scale(1.2);
+    transition-duration: 0s;
+}
+
+
+@media screen and (max-width: 1400px) {
+
+    .tabela{
+        width: 70%;
+    }
+    
+    
+    
+    
+    
+}
+@media screen and (max-width: 990px) {
+    
+    
+    
+    .tabela{
+        width: 50%;
+        
+    }
+
+    
+    
+}
+@media screen and (max-width: 770px) {
+    
+    
+    
+    .tabela{
+        width: 30%;
+    }
+    
+
+    
+    
+}

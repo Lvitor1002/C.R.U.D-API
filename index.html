@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notes</title>
     <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/celular.css">
     <link rel="stylesheet" href="style/tabelaUsuario.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     
-    <script src="usuarioRepository.js" defer></script><!-- Primeiro a API --> 
-    <script src="index.js" defer></script>
+    <script type="module" src="index.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
 <body>
@@ -23,34 +24,52 @@
 
             <p id="mensagensDeErro" class="mensagensDeErro"></p>
 
-            <form class="formularioCadastroUsuario" id="formularioCadastroUsuario">
+            <form class="formularioCadastroUsuario" id="idFormularioCadastroUsuario">
 
-               
                 <div class="entrada">
 
-                    <input name="nome" placeholder="Nome" id="nome" type="text" required>
+                    <input name="nome" placeholder="Nome" id="idNome" type="text" maxlength="50">
 
                 </div>
 
 
                 <div class="entrada">
 
-                    <input name="email" placeholder="E-mail" id="email" type="text" required>
+                    <input name="email" placeholder="E-mail" id="idEmail" type="text">
 
                 </div>
 
-                <input name="idusuario" id="idusuario" type="hidden" value="">
+                <input name="idusuario" id="idUsuario" type="hidden" value="">
                 
-                <button id="confirmaUsuario" type="submit" class="icone">
-                    <i class="bi bi-plus-circle-fill"></i>
+                <button id="idConfirmaUsuario" type="submit" class="bi bi-plus-circle-fill icone">
+
+                    <div id="idLoading" class="spinner-grow text-primary ocultar" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
                 </button>
+
 
             </form><!-- FIM - formularioCadastroUsuario -->
 
-            <table class="tabelaUsuarios" id="tabelaUsuarios">
-                 <!-- Criado no .JS -->
-                
-            </table>
+            <div class="controle">
+
+                <table>
+                    <tr class="tabela">
+                        <th>Nome</th>
+                        <th id="em">E-mail</th>
+                        <th id="op">Opção</th>
+                    </tr>
+                </table>
+    
+                <table class="tabelaUsuarios" id="idTabelaUsuarios">
+                    
+                    <!-- td Criado no .JS -->
+                    
+                    
+                    
+                    
+                </table>
+            </div>
         
         </div><!-- FIM - container -->
     
