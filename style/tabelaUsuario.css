@@ -145,9 +145,21 @@ th{
     
     .tabela{
         width: 30%;
+        gap:80px;
+
+    }
+    .tabelaUsuarios tr {
+        width: 100%;
+        font-size: 15px;
     }
     
 
     
+    
+}
+@media screen and (max-width: 500px) {
+    body{
+        overflow-x: hidden;
+    }  
     
 }
