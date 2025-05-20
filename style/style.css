@@ -6,7 +6,7 @@
 
 body{
     background: linear-gradient(to right, rgb(5, 2, 85),rgb(8, 4, 134), rgb(0, 110, 255))!important;
-    overflow-x: hidden;
+    overflow-x: hidden!important;
 }
 .container {
     margin: 5% 20%;
