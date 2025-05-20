@@ -9,7 +9,17 @@ const emailInput = document.getElementById("idEmail")
 const btnConfirmaUsuario = document.getElementById("idConfirmaUsuario")
 const idLoading = document.getElementById("idLoading")
 
-renderizarTabela()
+const pesquisarInput = document.getElementById("idPesquisar")
+
+carregarUsuarios()
+
+let listaUsuariosCache = [];
+
+async function carregarUsuarios() {
+
+    listaUsuariosCache = await new ApiRepository().carregarUsuarios()
+    renderizarTabela()
+}
 
 formulario.addEventListener("submit", async function(evento){
 
@@ -61,18 +71,18 @@ formulario.addEventListener("submit", async function(evento){
         idLoading.classList.add("ocultar")
     }
     
-    renderizarTabela()
+    await carregarUsuarios()
 
 })
 
-async function renderizarTabela(){
+
+async function renderizarTabela(usuarios){
 
     campoTabela.innerHTML = ''; 
 
-    let listaUsuario = await new ApiRepository().carregarUsuarios()
+    const listaParaRenderizar = usuarios || listaUsuariosCache
     
-    
-    listaUsuario.forEach((usuario) => {
+    listaParaRenderizar.forEach((usuario) => {
         
         
         const trLinha = document.createElement("tr")
@@ -174,4 +184,21 @@ async function renderizarTabela(){
     });
 }
 
+
+
+pesquisarInput.addEventListener("input",function(evento){
+
+    const pesquisa = pesquisarInput.value.trim().toLowerCase()
+
+    if(pesquisa === ""){
+        renderizarTabela()
+        return 
+    }
+
+    //verifica se o texto do campo nome contém o valor da variável pesquisa.
+    const usuariosFiltrados = listaUsuariosCache.filter(u => u.nome.toLowerCase().includes(pesquisa))
+
+    renderizarTabela(usuariosFiltrados)
+
+})
 
