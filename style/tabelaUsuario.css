@@ -82,9 +82,10 @@ th{
 
 .campoOp{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     flex-direction: row;
     align-items: center;
+    gap: 10%;
 
 }
 .campoOp .editar{

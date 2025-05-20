@@ -126,6 +126,7 @@ h1 {
 @media screen and (max-width: 560px) {
     .container {
         margin: 10% 9%;
+        width: 100%;
     }
     .headerCadastro {
         flex-direction: column;
